@@ -1,0 +1,24 @@
+#BASE images
+FROM centos:7
+
+#MAINTAINER
+MAINTAINER zoujing 489548322@qq.com
+
+ENV NGINX_VERSION 1.15.8
+
+#RUN 
+RUN yum install -y gcc gcc-c++ autoconf automake libtool make cmake openssl-devel pcre
+RUN useradd -r -s /sbin/nologin -M www 
+RUN curl -Lk http://nginx.org/download/nginx-$NGINX_VERSION.tar.gz | gunzip | tar x -C /usr/local/src
+
+#WORKDIR
+WORKDIR /usr/local/src/nginx-$NGINX_VERSION 
+RUN ./configure --prefix=/usr/local/nginx --user=www --group=www --with-pcre --with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --with-http_gzip_static_module && make && make install 
+RUN echo "daemon off;" >> /usr/local/nginx/conf/nginx.conf
+
+ENV PATH /usr/local/nginx/sbin:$PATH
+EXPOSE 80 443
+
+CMD ["nginx"]
+
+#docker build -t nginx-file:v1 /opt/docker-file/nginx/
