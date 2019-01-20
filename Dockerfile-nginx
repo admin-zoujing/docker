@@ -1,3 +1,7 @@
+#This docker file use the centos image
+#VERSION 1
+#Auther: zoujing
+
 #BASE images
 FROM centos:7
 
