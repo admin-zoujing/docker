@@ -25,4 +25,4 @@ EXPOSE 80 443
 
 CMD ["nginx"]
 
-#docker build -t nginx-file:v1 /opt/docker-file/nginx/
+#usage: docker build -t nginx-file:v1 /opt/docker-file/nginx/
