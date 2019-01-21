@@ -6,8 +6,7 @@
 
 #docker run -it -d -v /home/data:/data-volumes --name data-volumes docker.io/centos 
 
-#数据卷容器
-docker run -it -d --volumes-from data-volumes --name nginx docker.io/centos
+#数据卷容器docker run -it -d --volumes-from data-volumes --name nginx docker.io/centos
 
 #数据卷容器来备份
 docker run --volumes-from data-volumes -v $(pwd):/backup docker.io/centos tar cvf /backup/backup.tar
