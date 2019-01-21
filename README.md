@@ -30,3 +30,4 @@ docker run -v /data-volumes --name data-volumes docker.io/centos /bin/bash
 #数据卷容器来迁移: 
 docker run --volumes-from data-volumes -v $(pwd):/backup docker.io/centos tar xvf /backup/backup.tar
 
+# 网络
