@@ -18,7 +18,7 @@ RUN curl -Lk http://nginx.org/download/nginx-$NGINX_VERSION.tar.gz | gunzip | ta
 #WORKDIR
 WORKDIR /usr/local/src/nginx-$NGINX_VERSION 
 RUN ./configure --prefix=/usr/local/nginx --user=www --group=www --with-pcre --with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --with-http_gzip_static_module && make && make install 
-RUN echo "\n daemon off;" >> /usr/local/nginx/conf/nginx.conf
+RUN echo "\ndaemon off;" >> /usr/local/nginx/conf/nginx.conf
 
 #EXPOSE
 EXPOSE 80 
@@ -27,4 +27,4 @@ EXPOSE 80
 CMD /usr/local/nginx/sbin/nginx
 
 #usage: docker build -t nginx-file:v1 /opt/docker-file/nginx/
-#usage: docker run -it -d -p 80:80 --name nginx:v1 nginx-file:v1
+#usage: docker run -it -d -p 80:80 --name nginx nginx-file:v1
