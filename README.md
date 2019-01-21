@@ -20,9 +20,9 @@ docker run -v /data-volumes --name data-volumes docker.io/centos /bin/bash
 docker run --volumes-from data-volumes -v $(pwd):/backup docker.io/centos tar xvf /backup/backup.tar
 
 # 查看docker信息
-#主机名：docker exec data-volumes hostname
+#主机名称：docker exec data-volumes hostname
 
-#IP地址：docker exec data-volumes cat /etc/hosts
+#网络地址：docker exec data-volumes cat /etc/hosts
 
 #环境配置：docker exec data-volumes env
 
