@@ -11,7 +11,7 @@ MAINTAINER zoujing 489548322@qq.com
 ENV NGINX_VERSION 1.15.8
 
 #RUN 
-RUN yum install -y gcc gcc-c++ autoconf automake libtool make cmake openssl-devel pcre
+RUN yum install -y gcc gcc-c++ make cmake openssl-devel pcre-devel zlib   
 RUN useradd -r -s /sbin/nologin -M www 
 RUN curl -Lk http://nginx.org/download/nginx-$NGINX_VERSION.tar.gz | gunzip | tar x -C /usr/local/src
 
