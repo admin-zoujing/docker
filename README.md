@@ -11,6 +11,8 @@
 
 #使用效率：docker top data-volumes 
 
+#映射端口：docker port data-volumes  80
+
 # 数据卷
 #数据卷（默认目录/var/lib/docker/volumes/）:
 docker run -it -d -v /data-volumes --name data-volumes docker.io/centos 
