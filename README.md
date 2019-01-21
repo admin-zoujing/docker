@@ -34,7 +34,7 @@ docker run --volumes-from data-volumes -v $(pwd):/backup docker.io/centos tar xv
 
 # 网络
 #外部访问容器：
-docker run -it -d -p 192.168.8.52:80:80/tcp --volumes-from data-volumes --name nginx nginx:1.15.8
+docker run -it -d -p 192.168.8.52:80:80/tcp --volumes-from data-volumes --name nginx1 nginx:1.15.8
 
 #容器互联：
-docker run -it -d -p 192.168.8.52:6379:6379/tcp --volumes-from data-volumes --link redis:redis --name nginx nginx:1.15.8
+docker run -it -d -p 192.168.8.52:6379:6379/tcp --volumes-from data-volumes --link redis:redis --name nginx2 nginx:1.15.8
