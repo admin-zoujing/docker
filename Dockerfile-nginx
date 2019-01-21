@@ -27,3 +27,4 @@ EXPOSE 80
 CMD /usr/local/nginx/sbin/nginx
 
 #usage: docker build -t nginx-file:v1 /opt/docker-file/nginx/
+#usage: docker run -it -d -p 80:80 --name nginx:v1 nginx-file:v1
