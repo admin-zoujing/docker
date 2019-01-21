@@ -1,8 +1,7 @@
 # docker用法
 
-#数据卷（默认目录/var/lib/docker/volumes/）
-
-#docker run -it -d -v /data-volumes --name data-volumes docker.io/centos 
+#数据卷（默认目录/var/lib/docker/volumes/）:
+docker run -it -d -v /data-volumes --name data-volumes docker.io/centos 
 
 #docker run -it -d -v /home/data:/data-volumes --name data-volumes docker.io/centos 
 
