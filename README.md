@@ -33,5 +33,5 @@ docker run -v /data-volumes --name data-volumes docker.io/centos /bin/bash
 docker run --volumes-from data-volumes -v $(pwd):/backup docker.io/centos tar xvf /backup/backup.tar
 
 # 网络
-#外部访问容器
+#外部访问容器：
 docker run -it -d -p 127.0.0.1:80:80/tcp --volumes-from data-volumes --name nginx nginx:1.15.8
