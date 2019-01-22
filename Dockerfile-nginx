@@ -3,7 +3,7 @@
 #Auther: zoujing
 
 #BASE images
-FROM centos:7
+FROM centos:latest
 
 #MAINTAINER
 MAINTAINER zoujing 489548322@qq.com
