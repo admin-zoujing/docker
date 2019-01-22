@@ -44,4 +44,4 @@ docker run -it -d -p 192.168.8.52:6379:6379/tcp --volumes-from data-volumes --li
 curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`-`uname -m` > /usr/local/bin/fig; chmod +x /usr/local/bin/fig
 
 #用法：
-fig {bulid, help, kill, logs, port, ps, pull, rm, run, scale, start, stop, up}
+fig {help, bulid, kill, logs, port, ps, pull, rm, run, scale, start, stop, restart, up}
