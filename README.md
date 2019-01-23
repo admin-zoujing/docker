@@ -45,3 +45,4 @@ curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`-`un
 
 #用法：
 fig {help, bulid, kill, logs, port, ps, pull, rm, run, scale, start, stop, restart, up}
+
