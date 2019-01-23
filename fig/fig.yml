@@ -1,0 +1,20 @@
+web:
+   build: .
+   command: python app.py
+#   ports:
+#   - "5000:5000"
+   volumes:
+   - .:/code
+   links:
+   - redis
+redis:
+   image: docker.io/redis
+
+#proxy:
+#   image: docker.io/haproxy
+#   links:
+#   - web
+#   ports:
+#   - "5000:5000"
+#   environment:
+#   - PORT=5000
