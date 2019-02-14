@@ -99,9 +99,9 @@ Commands:
 
 # docker-compose 常用命令
 Commands:
-  build       Build or rebuild services                     
-  bundle      Generate a Docker bundle from the Compose file
-  config      Validate and view the compose file            
+  build              Build or rebuild services
+  bundle             Generate a Docker bundle from the Compose file
+  config             Validate and view the compose file
   create             Create services
   down               Stop and remove containers, networks, images, and volumes
   events             Receive real time events from containers
