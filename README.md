@@ -49,11 +49,8 @@ fig {help, bulid, kill, logs, port, ps, pull, rm, run, scale, start, stop, resta
 # docker 命令帮助
 Commands:
     attach    Attach to a running container                 # 当前 shell 下 attach 连接指定运行镜像
-    
     build     Build an image from a Dockerfile              # 通过 Dockerfile 定制镜像
-    
     commit    Create a new image from a container's changes # 提交当前容器为新的镜像
-    
     cp        Copy files/folders from the containers filesystem to the host path
               # 从容器中拷贝指定文件或者目录到宿主机中
     create    Create a new container                        # 创建一个新的容器，同 run，但不启动容器
