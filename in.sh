@@ -1,5 +1,5 @@
 #!/bin/bash
-yum -y install util-linux
+#yum -y install util-linux
 CNAME=$1
 CPID=$(docker inspect --format "{{ .State.Pid }}" $CNAME)
 nsenter --target "$CPID" --mount --uts --ipc --net --pid
