@@ -98,8 +98,8 @@ Commands:
               # 截取容器停止时的退出状态值
 
 # docker-compose 常用命令
-Commands:
-  build       Build or rebuild services
+Commands：
+  build       Build or rebuild services                        # 构建一个服务
   bundle      Generate a Docker bundle from the Compose file
   config      Validate and view the compose file
   create      Create services
