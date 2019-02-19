@@ -1,5 +1,5 @@
 #!/bin/bash
-#使用docker attach有时会开住，并且退出会停止容器，使用下面脚本进入则可避免！
+#使用docker attach有时会卡住，并且退出会停止容器，使用下面脚本进入则可避免！
 #yum -y install util-linux
 CNAME=$1
 CPID=$(docker inspect --format "{{ .State.Pid }}" $CNAME)
