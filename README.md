@@ -46,6 +46,10 @@ curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`-`un
 #用法：
 fig {help, bulid, kill, logs, port, ps, pull, rm, run, scale, start, stop, restart, up}
 
+# 容器备份恢复：
+docker save -o mynginx.tar mynginx
+docker load -i mynginx.tar
+
 # docker 命令帮助
 Commands:
 
